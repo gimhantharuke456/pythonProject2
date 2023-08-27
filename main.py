@@ -6,10 +6,10 @@ import httpx
 from io import BytesIO
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from mangum import Mangum
+
 
 app = FastAPI()
-handler = Mangum(app)
+
 # Set up CORS to allow requests from all origins
 origins = ["*"]
 app.add_middleware(CORSMiddleware, allow_origins=origins, allow_credentials=True, allow_methods=["*"],
@@ -68,7 +68,7 @@ async def convert(request: dict):
         return {"error": "URL parameter missing"}
 
 
-'''if __name__ == "__main__":
+if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="127.0.0.1", port=8005)'''
+    uvicorn.run(app, host="127.0.0.1", port=8005)

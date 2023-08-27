@@ -3,16 +3,3 @@ pydub
 httpx
 fastapi
 uvicorn
-mangum
-sniffio
-idna
-certifi
-httpcore
-h11
-starlette
-pydantic
-pydantic_core
-typing_extensions
-annotated_types
-anyio
-pbr
